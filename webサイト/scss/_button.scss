@@ -1,0 +1,16 @@
+.btn,
+button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(to right, variables.$orange, yellow);
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

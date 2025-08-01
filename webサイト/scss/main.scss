@@ -1,0 +1,9 @@
+@use "variables";
+@use "base";
+@use "header";
+@use "hero";
+@use "section";
+@use "button";
+body {
+  font-family: variables.$font-main;
+}

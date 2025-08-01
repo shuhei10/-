@@ -1,0 +1,27 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: variables.$white;
+
+  .logo p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navi {
+    ul.menu {
+      display: flex;
+      gap: 1.5rem;
+
+      li a {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none; // メディアクエリで表示切替
+  }
+}

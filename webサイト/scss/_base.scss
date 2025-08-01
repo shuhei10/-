@@ -1,0 +1,16 @@
+body {
+  font-family: variables.$font-main;
+  background-color: variables.$light-orange;
+  color: variables.$purple;
+  line-height: 1.8;
+}
+
+a {
+  color: variables.$purple;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

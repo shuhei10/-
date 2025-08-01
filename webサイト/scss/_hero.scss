@@ -1,0 +1,51 @@
+.mainvisual {
+  padding: 2rem 1rem;
+
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .text .catchphrase {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .img img {
+    max-width: 400px;
+  }
+}
+
+.sub_main {
+  background-color: #fff8f2;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .sub_text {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    span {
+      display: inline-block;
+    }
+  }
+
+  .catch_text {
+    flex: 1;
+    margin-top: 1rem;
+    .sentence span {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
