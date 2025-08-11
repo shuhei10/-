@@ -1,0 +1,199 @@
+$purple: #8000a0;
+$orange: #ff9300;
+$peach: #fcd4ad;
+$lightgray: #eeeeee;
+$white: #ffffff;
+
+body {
+  font-family: "BIZ UDPGothic", sans-serif;
+  margin: 0;
+  background-color: $white;
+  color: $purple;
+}
+
+.header {
+  background-color: $peach;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-weight: bold;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 25px;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    background: #8000a0;
+    transition: 0.3s;
+  }
+
+  /* メニュー非表示（SP時） */
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #fcd4ad;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav {
+    a {
+      margin-left: 1rem;
+      color: $purple;
+      text-decoration: none;
+    }
+  }
+}
+
+.contact-hero {
+  background-color: $peach;
+  padding: 3rem 1rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.contact-intro {
+  background-color: $lightgray;
+  text-align: center;
+  padding: 2rem 1rem;
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+.contact-form-section {
+  background-color: $orange;
+  padding: 2rem 1rem;
+  color: $purple;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+
+    label {
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 1.5rem;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    button {
+      background-color: $white;
+      color: $purple;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      align-self: center;
+    }
+  }
+}
+
+.footer {
+  background-color: $peach;
+  text-align: center;
+  padding: 2rem 1rem;
+
+  .footer-logo {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav {
+    margin-bottom: 1rem;
+
+    a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: $purple;
+    }
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+// モバイルファーストをベースにしたPC版調整
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1.5rem 4rem;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    width: auto;
+  }
+
+  .nav a {
+    font-size: 1rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-form {
+    input,
+    textarea {
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+  .footer {
+    padding: 2rem 4rem;
+  }
+}

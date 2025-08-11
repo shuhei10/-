@@ -4,6 +4,11 @@
 @use "hero";
 @use "section";
 @use "button";
+@use "voice";
+@use "contact";
+@use "footer";
+@use "responsive";
+
 body {
   font-family: variables.$font-main;
 }

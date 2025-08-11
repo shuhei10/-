@@ -1,0 +1,14 @@
+.site-footer {
+  background-color: #ffe4c4;
+  color: #8619b4;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
