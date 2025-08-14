@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -92,10 +92,13 @@ header {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 3rem;
+    text-align: center;
   }
 
   p {
     margin: 0.5rem 0;
+    font-size: 1.5rem;
+    margin-left: 20rem;
   }
 }
 
@@ -161,7 +164,6 @@ header {
       border: 2px solid #edeced;
     }
 
-    /* セクションの帯（PCでは左列、SPでは全幅） */
     .section-title {
       text-align: center;
       padding-top: 1.5rem;
@@ -179,11 +181,11 @@ header {
 .option {
   background: #e8e8e8;
   padding: 5rem 1rem;
-  text-align: center;
 
   h2 {
     font-size: 3rem;
     margin-bottom: 4rem;
+    text-align: center;
     &::after {
       content: "";
       display: block;
@@ -197,6 +199,7 @@ header {
   h3 {
     margin-bottom: 5rem;
     font-size: 2rem;
+    margin-left: 28rem;
   }
   .box {
     display: flex;
@@ -204,6 +207,7 @@ header {
     gap: 10vw;
     p {
       font-size: 2rem;
+
       strong {
         font-weight: 800;
       }
@@ -219,11 +223,11 @@ header {
   background: white;
   padding-top: 4rem;
   padding-bottom: 8rem;
-  text-align: center;
 
   h2 {
     font-size: 3rem;
     margin-bottom: 4rem;
+    text-align: center;
     &::after {
       content: "";
       display: block;
@@ -233,18 +237,22 @@ header {
       margin: 1rem auto 0;
     }
   }
+  p {
+    font-size: 1.5rem;
+    margin-left: 35rem;
+  }
 }
 
 .contact {
   background: #ff8f1f;
   padding: 5rem 2rem;
-  text-align: center;
   color: #5f2397;
 
   h2 {
     font-size: 4rem;
     margin-bottom: 1rem;
     display: block;
+    text-align: center;
 
     &::after {
       content: "";
@@ -265,9 +273,8 @@ header {
   }
   p {
     font-size: 2rem;
-    .space {
-      margin-right: 2rem;
-    }
+    margin-left: 20rem;
+    padding-bottom: 2rem;
   }
   .btn {
     background: white;
@@ -278,6 +285,7 @@ header {
     margin-top: 2rem;
     font-weight: bold;
     font-size: 2rem;
+    margin-left: 28rem;
   }
 }
 
@@ -291,7 +299,7 @@ footer {
     font-size: 1.5rem;
   }
   p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     width: 100%;
     margin-top: 1rem;
@@ -381,9 +389,7 @@ footer {
 
   .about-pricing h2,
   .course-table h2,
-  .option h2,
-  .payment h2,
-  .contact h2 {
+  .payment h2 {
     font-size: 2.5em;
   }
 
@@ -428,6 +434,7 @@ footer {
     }
   }
   .course-block {
+    padding: 4rem 1.5rem;
     .courses-table {
       grid-template-columns: 0px 1fr 1fr;
       margin: 0;
@@ -436,16 +443,18 @@ footer {
         line-height: 1;
       }
 
-      /* 1行目（見出し） */
-      .head.empty {
-        display: none;
-      } /* 左上の空きを消す */
       .head {
-        font-size: 1rem;
-      } /* 見出し2つを横並び */
-
+        font-size: 1.5rem;
+      }
+      .cell-head {
+        margin-right: 0.5rem;
+      }
+      .head-cell {
+        margin-left: 0.5rem;
+      }
       /* セクション帯を全幅センターに */
-      .section-title {
+      .section-title,
+      .label-title {
         grid-column: 1 / -1;
         font-size: 1.5rem;
         background: #ffe2c6;
@@ -459,10 +468,105 @@ footer {
         padding: 1rem 0;
       }
     }
+    .purpose {
+      display: flex;
+      width: 45rem;
+      border: 5px solid #edeced;
+      .cell {
+        background: #ff8f1f;
+        padding: 5rem 0 5rem 0;
+        flex: 1;
+      }
+    }
+    .period {
+      display: flex;
+      width: 45rem;
+      border: 5px solid #edeced;
+      .cell {
+        background: #ff8f1f;
+        padding: 1rem;
+        flex: 1;
+      }
+    }
+    .price {
+      display: flex;
+      width: 45rem;
+      border: 5px solid #edeced;
+      .cell {
+        background: #ff8f1f;
+        padding: 1rem;
+        flex: 1;
+      }
+    }
+    .detail {
+      display: flex;
+      width: 45rem;
+      border: 5px solid #edeced;
+      .cell {
+        background: #ff8f1f;
+        flex: 1;
+      }
+      .cell-value {
+        padding: 5rem 0 5rem 0;
+        line-height: 4;
+      }
+      .detail-cell {
+        padding: 3rem 0 3rem 0;
+        line-height: 3;
+      }
+    }
+  }
+  .option {
+    h3 {
+      margin-left: 7rem;
+    }
+    .box {
+      display: block;
+      margin-left: 0;
+      p {
+        margin-left: 8rem;
+        margin-bottom: 2rem;
+        line-height: 2;
+      }
+      img {
+        margin-left: 3rem;
+      }
+    }
+  }
+  .payment {
+    P {
+      margin-left: 14rem;
+    }
+  }
+  .contact {
+    h2 {
+      display: none;
+    }
+    padding: 3rem 2rem;
+    p {
+      margin-left: 2rem;
+    }
+    .btn {
+      margin-left: 7rem;
+    }
   }
 
-  .footer nav a {
+  footer {
     display: block;
-    margin: 0.2rem 0;
+    line-height: 2;
+    padding: 2rem 5rem;
+    .logo {
+      font-size: 3rem;
+      margin-left: 8rem;
+    }
+    nav {
+      margin-left: 5rem;
+      a {
+        text-align: center;
+      }
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 }

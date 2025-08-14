@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -93,9 +93,12 @@ header .main-nav a:hover {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 3rem;
+  text-align: center;
 }
 .about-pricing p {
   margin: 0.5rem 0;
+  font-size: 1.5rem;
+  margin-left: 20rem;
 }
 
 .course-block {
@@ -124,7 +127,6 @@ header .main-nav a:hover {
   overflow: hidden;
   margin: 5rem;
   /* 左のラベル列（PCでのみ効く帯） */
-  /* セクションの帯（PCでは左列、SPでは全幅） */
 }
 .course-block .courses-table .cell {
   padding: 1rem 0 1rem 0;
@@ -172,11 +174,11 @@ header .main-nav a:hover {
 .option {
   background: #e8e8e8;
   padding: 5rem 1rem;
-  text-align: center;
 }
 .option h2 {
   font-size: 3rem;
   margin-bottom: 4rem;
+  text-align: center;
 }
 .option h2::after {
   content: "";
@@ -189,6 +191,7 @@ header .main-nav a:hover {
 .option h3 {
   margin-bottom: 5rem;
   font-size: 2rem;
+  margin-left: 28rem;
 }
 .option .box {
   display: flex;
@@ -210,11 +213,11 @@ header .main-nav a:hover {
   background: white;
   padding-top: 4rem;
   padding-bottom: 8rem;
-  text-align: center;
 }
 .payment h2 {
   font-size: 3rem;
   margin-bottom: 4rem;
+  text-align: center;
 }
 .payment h2::after {
   content: "";
@@ -224,17 +227,21 @@ header .main-nav a:hover {
   background: #5f2397;
   margin: 1rem auto 0;
 }
+.payment p {
+  font-size: 1.5rem;
+  margin-left: 35rem;
+}
 
 .contact {
   background: #ff8f1f;
   padding: 5rem 2rem;
-  text-align: center;
   color: #5f2397;
 }
 .contact h2 {
   font-size: 4rem;
   margin-bottom: 1rem;
   display: block;
+  text-align: center;
 }
 .contact h2::after {
   content: "";
@@ -254,9 +261,8 @@ header .main-nav a:hover {
 }
 .contact p {
   font-size: 2rem;
-}
-.contact p .space {
-  margin-right: 2rem;
+  margin-left: 20rem;
+  padding-bottom: 2rem;
 }
 .contact .btn {
   background: white;
@@ -267,6 +273,7 @@ header .main-nav a:hover {
   margin-top: 2rem;
   font-weight: bold;
   font-size: 2rem;
+  margin-left: 28rem;
 }
 
 footer .logo {
@@ -278,7 +285,7 @@ footer nav {
   font-size: 1.5rem;
 }
 footer p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   width: 100%;
   margin-top: 1rem;
@@ -367,9 +374,7 @@ footer p {
   }
   .about-pricing h2,
   .course-table h2,
-  .option h2,
-  .payment h2,
-  .contact h2 {
+  .payment h2 {
     font-size: 2.5em;
   }
   header {
@@ -408,25 +413,29 @@ footer p {
   .about-pricing p .pc-only {
     display: none;
   }
+  .course-block {
+    padding: 4rem 1.5rem;
+  }
   .course-block .courses-table {
     grid-template-columns: 0px 1fr 1fr;
     margin: 0;
-    /* 1行目（見出し） */
-    /* 左上の空きを消す */
-    /* 見出し2つを横並び */
     /* セクション帯を全幅センターに */
     /* 値を2列で並べる */
   }
   .course-block .courses-table .cell {
     line-height: 1;
   }
-  .course-block .courses-table .head.empty {
-    display: none;
-  }
   .course-block .courses-table .head {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
-  .course-block .courses-table .section-title {
+  .course-block .courses-table .cell-head {
+    margin-right: 0.5rem;
+  }
+  .course-block .courses-table .head-cell {
+    margin-left: 0.5rem;
+  }
+  .course-block .courses-table .section-title,
+  .course-block .courses-table .label-title {
     grid-column: 1/-1;
     font-size: 1.5rem;
     background: #ffe2c6;
@@ -437,8 +446,99 @@ footer p {
     background: #fff6ef;
     padding: 1rem 0;
   }
-  .footer nav a {
+  .course-block .purpose {
+    display: flex;
+    width: 45rem;
+    border: 5px solid #edeced;
+  }
+  .course-block .purpose .cell {
+    background: #ff8f1f;
+    padding: 5rem 0 5rem 0;
+    flex: 1;
+  }
+  .course-block .period {
+    display: flex;
+    width: 45rem;
+    border: 5px solid #edeced;
+  }
+  .course-block .period .cell {
+    background: #ff8f1f;
+    padding: 1rem;
+    flex: 1;
+  }
+  .course-block .price {
+    display: flex;
+    width: 45rem;
+    border: 5px solid #edeced;
+  }
+  .course-block .price .cell {
+    background: #ff8f1f;
+    padding: 1rem;
+    flex: 1;
+  }
+  .course-block .detail {
+    display: flex;
+    width: 45rem;
+    border: 5px solid #edeced;
+  }
+  .course-block .detail .cell {
+    background: #ff8f1f;
+    flex: 1;
+  }
+  .course-block .detail .cell-value {
+    padding: 5rem 0 5rem 0;
+    line-height: 4;
+  }
+  .course-block .detail .detail-cell {
+    padding: 3rem 0 3rem 0;
+    line-height: 3;
+  }
+  .option h3 {
+    margin-left: 7rem;
+  }
+  .option .box {
     display: block;
-    margin: 0.2rem 0;
+    margin-left: 0;
+  }
+  .option .box p {
+    margin-left: 8rem;
+    margin-bottom: 2rem;
+    line-height: 2;
+  }
+  .option .box img {
+    margin-left: 3rem;
+  }
+  .payment P {
+    margin-left: 14rem;
+  }
+  .contact {
+    padding: 3rem 2rem;
+  }
+  .contact h2 {
+    display: none;
+  }
+  .contact p {
+    margin-left: 2rem;
+  }
+  .contact .btn {
+    margin-left: 7rem;
+  }
+  footer {
+    display: block;
+    line-height: 2;
+    padding: 2rem 5rem;
+  }
+  footer .logo {
+    font-size: 3rem;
+    margin-left: 8rem;
+  }
+  footer nav {
+    margin-left: 5rem;
+  }
+  footer nav a {
+    text-align: center;
+  }
+  footer p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=pricing.css.map */
