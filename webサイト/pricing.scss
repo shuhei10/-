@@ -37,11 +37,11 @@ header {
 
   .logo {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 600;
     margin-left: 3rem;
   }
   .main-nav {
-    margin-right: 2rem;
+    margin-right: 3rem;
     li {
       list-style: none;
       margin: 0;
@@ -98,20 +98,20 @@ header {
   p {
     margin: 0.5rem 0;
     font-size: 1.5rem;
-    margin-left: 20rem;
+    margin-left: 35rem;
   }
 }
 
 .course-block {
   background: #ff8900;
-  padding: 4rem 4rem;
+  padding: 4rem;
   text-align: center;
 
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 3rem;
-    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     color: #5f2397;
     &::after {
       content: "";
@@ -124,56 +124,79 @@ header {
   }
   .courses-table {
     display: grid;
-    grid-template-columns: 60px 1fr 1fr;
+    grid-template-columns: 160px 1fr 1fr;
     overflow: hidden;
-    margin: 5rem;
+    margin: 10vw;
 
-    .cell {
-      padding: 1rem 0 1rem 0;
-      background: #ff8400;
-      border: 2px solid #edeced;
-      line-height: 2;
-      text-align: center;
+    .purpose,
+    .period,
+    .price,
+    .detail {
+      display: contents;
     }
-    .value {
-      font-size: 1.5rem;
+    .cell {
+      padding: 3rem 2rem;
+      border: 4px solid #edeced;
+      background: #ff8400;
+      line-height: 1.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      p {
+        margin: 0;
+      }
     }
 
     .head {
       background: #fbd4b1;
       font-weight: 700;
-      font-size: 2rem;
-      padding: 1rem 0 1rem 0;
+      font-size: 2.5rem;
+      padding: 3rem 0 3rem 0;
       border: 2px solid #edeced;
 
       &:last-child {
         border-right: none;
       }
     }
-    .cell-head {
-      margin-right: 1rem;
-    }
-    .head-cell {
-      margin-left: 1rem;
-    }
 
     /* 左のラベル列（PCでのみ効く帯） */
     .label {
       background: #ffe2c6;
       font-weight: 700;
-      border: 2px solid #edeced;
+      color: #5f2397;
+      padding: 2rem 1rem 2rem 1rem;
+      font-size: 3rem;
+      border: 4px solid #edeced;
     }
-
-    .section-title {
+    .value {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    .detail .value {
       text-align: center;
-      padding-top: 1.5rem;
     }
-    .label-title {
-      text-align: center;
-      padding-top: 8rem;
+    .cell-head,
+    .head-cell {
+      margin: 0;
     }
+    .label-title,
     .cell-value {
-      padding-top: 5rem;
+      padding-top: 0;
+    }
+    .purpose {
+      p {
+        width: 91%;
+        margin: 0 auto;
+        text-align: left;
+        margin-left: 7rem;
+        .sp-only {
+          display: none;
+        }
+        .pc-only {
+          display: block;
+        }
+      }
     }
   }
 }
@@ -183,7 +206,7 @@ header {
   padding: 5rem 1rem;
 
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 4rem;
     text-align: center;
     &::after {
@@ -198,15 +221,15 @@ header {
 
   h3 {
     margin-bottom: 5rem;
-    font-size: 2rem;
-    margin-left: 28rem;
+    font-size: 3rem;
+    margin-left: 35rem;
   }
   .box {
     display: flex;
-    margin-left: 5vw;
+    margin-left: 10vw;
     gap: 10vw;
     p {
-      font-size: 2rem;
+      font-size: 2.5rem;
 
       strong {
         font-weight: 800;
@@ -214,7 +237,7 @@ header {
     }
     img {
       width: 100%;
-      max-width: 650px;
+      max-width: 700px;
     }
   }
 }
@@ -225,7 +248,7 @@ header {
   padding-bottom: 8rem;
 
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 4rem;
     text-align: center;
     &::after {
@@ -238,8 +261,8 @@ header {
     }
   }
   p {
-    font-size: 1.5rem;
-    margin-left: 35rem;
+    font-size: 2.5rem;
+    margin-left: 45rem;
   }
 }
 
@@ -250,7 +273,7 @@ header {
 
   h2 {
     font-size: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     display: block;
     text-align: center;
 
@@ -272,8 +295,8 @@ header {
     }
   }
   p {
-    font-size: 2rem;
-    margin-left: 20rem;
+    font-size: 2.5rem;
+    margin-left: 25rem;
     padding-bottom: 2rem;
   }
   .btn {
@@ -285,7 +308,7 @@ header {
     margin-top: 2rem;
     font-weight: bold;
     font-size: 2rem;
-    margin-left: 28rem;
+    margin-left: 42rem;
   }
 }
 
@@ -381,16 +404,90 @@ footer {
     transform: scale(1);
   }
 }
-
+/* 1440px */
+@media (max-width: 1440px) {
+  .about-pricing {
+    p {
+      margin-left: 20rem;
+    }
+  }
+  .course-block {
+    h2 {
+      font-size: 3rem;
+      margin-top: 5rem;
+      margin-bottom: 10rem;
+    }
+    .courses-table {
+      margin: 5vw;
+      .head {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .lable {
+        font-size: 1.5rem;
+      }
+      .value {
+        font-size: 2rem;
+      }
+      .cell {
+        padding: 2rem;
+        font-size: 2rem;
+      }
+      .purpose {
+        p {
+          margin-left: 4rem;
+        }
+      }
+    }
+  }
+  .option {
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      margin-left: 28rem;
+      font-size: 2rem;
+    }
+    .box {
+      margin-left: 8vw;
+      gap: 12vw;
+      img {
+        max-width: 550px;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+  .payment {
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2rem;
+      margin-left: 30rem;
+    }
+  }
+  .contact {
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      margin-left: 25rem;
+      font-size: 1.5rem;
+    }
+    .btn {
+      margin-left: 28rem;
+    }
+  }
+}
+/* 768px */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3.8rem;
-  }
-
-  .about-pricing h2,
-  .course-table h2,
-  .payment h2 {
-    font-size: 2.5em;
   }
 
   header {
@@ -424,6 +521,9 @@ footer {
     }
   }
   .about-pricing {
+    h2 {
+      font-size: 2.5rem;
+    }
     p {
       font-size: 2rem;
       margin: 0.5rem 92px;
@@ -433,8 +533,23 @@ footer {
       }
     }
   }
+  .purpose,
+  .period,
+  .price,
+  .detail {
+    display: flex !important;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: 5px solid #edeced;
+    background: #ff8400;
+  }
+
   .course-block {
-    padding: 4rem 1.5rem;
+    h2 {
+      font-size: 2.5rem;
+      margin-top: 0;
+      margin-bottom: 5rem;
+    }
     .courses-table {
       grid-template-columns: 0px 1fr 1fr;
       margin: 0;
@@ -444,7 +559,8 @@ footer {
       }
 
       .head {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        padding: 2rem 0 2rem 0;
       }
       .cell-head {
         margin-right: 0.5rem;
@@ -465,23 +581,23 @@ footer {
       /* 値を2列で並べる */
       .value {
         background: #fff6ef;
-        padding: 1rem 0;
       }
     }
     .purpose {
-      display: flex;
-      width: 45rem;
-      border: 5px solid #edeced;
       .cell {
         background: #ff8f1f;
-        padding: 5rem 0 5rem 0;
-        flex: 1;
+
+        p {
+          width: 70%;
+          margin: 20vw;
+          text-align: left;
+          .sp-only {
+            display: inline;
+          }
+        }
       }
     }
     .period {
-      display: flex;
-      width: 45rem;
-      border: 5px solid #edeced;
       .cell {
         background: #ff8f1f;
         padding: 1rem;
@@ -489,9 +605,6 @@ footer {
       }
     }
     .price {
-      display: flex;
-      width: 45rem;
-      border: 5px solid #edeced;
       .cell {
         background: #ff8f1f;
         padding: 1rem;
@@ -499,9 +612,6 @@ footer {
       }
     }
     .detail {
-      display: flex;
-      width: 45rem;
-      border: 5px solid #edeced;
       .cell {
         background: #ff8f1f;
         flex: 1;
@@ -509,32 +619,49 @@ footer {
       .cell-value {
         padding: 5rem 0 5rem 0;
         line-height: 4;
+        p {
+          width: 70%;
+          margin: 0 auto;
+        }
       }
       .detail-cell {
         padding: 3rem 0 3rem 0;
-        line-height: 3;
+        line-height: 2;
+        p {
+          width: 72%;
+          margin: 0 auto;
+        }
       }
     }
   }
   .option {
+    h2 {
+      font-size: 2.5rem;
+    }
     h3 {
-      margin-left: 7rem;
+      font-size: 1.5rem;
+      margin-left: 10rem;
     }
     .box {
       display: block;
       margin-left: 0;
       p {
-        margin-left: 8rem;
-        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        margin-left: 11rem;
+        margin-bottom: 5rem;
         line-height: 2;
       }
       img {
-        margin-left: 3rem;
+        margin-left: 6rem;
       }
     }
   }
   .payment {
+    h2 {
+      font-size: 2.5rem;
+    }
     P {
+      font-size: 1.5rem;
       margin-left: 14rem;
     }
   }
@@ -542,8 +669,12 @@ footer {
     h2 {
       display: none;
     }
+    h3 {
+      font-size: 2rem;
+    }
     padding: 3rem 2rem;
     p {
+      font-size: 1.5rem;
       margin-left: 2rem;
     }
     .btn {

@@ -39,11 +39,11 @@ header {
 }
 header .logo {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-left: 3rem;
 }
 header .main-nav {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 header .main-nav li {
   list-style: none;
@@ -98,19 +98,19 @@ header .main-nav a:hover {
 .about-pricing p {
   margin: 0.5rem 0;
   font-size: 1.5rem;
-  margin-left: 20rem;
+  margin-left: 35rem;
 }
 
 .course-block {
   background: #ff8900;
-  padding: 4rem 4rem;
+  padding: 4rem;
   text-align: center;
 }
 .course-block h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 3rem;
-  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   color: #5f2397;
 }
 .course-block h2::after {
@@ -123,52 +123,74 @@ header .main-nav a:hover {
 }
 .course-block .courses-table {
   display: grid;
-  grid-template-columns: 60px 1fr 1fr;
+  grid-template-columns: 160px 1fr 1fr;
   overflow: hidden;
-  margin: 5rem;
+  margin: 10vw;
   /* 左のラベル列（PCでのみ効く帯） */
 }
+.course-block .courses-table .purpose,
+.course-block .courses-table .period,
+.course-block .courses-table .price,
+.course-block .courses-table .detail {
+  display: contents;
+}
 .course-block .courses-table .cell {
-  padding: 1rem 0 1rem 0;
+  padding: 3rem 2rem;
+  border: 4px solid #edeced;
   background: #ff8400;
-  border: 2px solid #edeced;
-  line-height: 2;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-.course-block .courses-table .value {
-  font-size: 1.5rem;
+.course-block .courses-table .cell p {
+  margin: 0;
 }
 .course-block .courses-table .head {
   background: #fbd4b1;
   font-weight: 700;
-  font-size: 2rem;
-  padding: 1rem 0 1rem 0;
+  font-size: 2.5rem;
+  padding: 3rem 0 3rem 0;
   border: 2px solid #edeced;
 }
 .course-block .courses-table .head:last-child {
   border-right: none;
 }
-.course-block .courses-table .cell-head {
-  margin-right: 1rem;
-}
-.course-block .courses-table .head-cell {
-  margin-left: 1rem;
-}
 .course-block .courses-table .label {
   background: #ffe2c6;
   font-weight: 700;
-  border: 2px solid #edeced;
+  color: #5f2397;
+  padding: 2rem 1rem 2rem 1rem;
+  font-size: 3rem;
+  border: 4px solid #edeced;
 }
-.course-block .courses-table .section-title {
+.course-block .courses-table .value {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.course-block .courses-table .detail .value {
   text-align: center;
-  padding-top: 1.5rem;
 }
-.course-block .courses-table .label-title {
-  text-align: center;
-  padding-top: 8rem;
+.course-block .courses-table .cell-head,
+.course-block .courses-table .head-cell {
+  margin: 0;
 }
+.course-block .courses-table .label-title,
 .course-block .courses-table .cell-value {
-  padding-top: 5rem;
+  padding-top: 0;
+}
+.course-block .courses-table .purpose p {
+  width: 91%;
+  margin: 0 auto;
+  text-align: left;
+  margin-left: 7rem;
+}
+.course-block .courses-table .purpose p .sp-only {
+  display: none;
+}
+.course-block .courses-table .purpose p .pc-only {
+  display: block;
 }
 
 .option {
@@ -176,7 +198,7 @@ header .main-nav a:hover {
   padding: 5rem 1rem;
 }
 .option h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -190,23 +212,23 @@ header .main-nav a:hover {
 }
 .option h3 {
   margin-bottom: 5rem;
-  font-size: 2rem;
-  margin-left: 28rem;
+  font-size: 3rem;
+  margin-left: 35rem;
 }
 .option .box {
   display: flex;
-  margin-left: 5vw;
+  margin-left: 10vw;
   gap: 10vw;
 }
 .option .box p {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .option .box p strong {
   font-weight: 800;
 }
 .option .box img {
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
 }
 
 .payment {
@@ -215,7 +237,7 @@ header .main-nav a:hover {
   padding-bottom: 8rem;
 }
 .payment h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -228,8 +250,8 @@ header .main-nav a:hover {
   margin: 1rem auto 0;
 }
 .payment p {
-  font-size: 1.5rem;
-  margin-left: 35rem;
+  font-size: 2.5rem;
+  margin-left: 45rem;
 }
 
 .contact {
@@ -239,7 +261,7 @@ header .main-nav a:hover {
 }
 .contact h2 {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   display: block;
   text-align: center;
 }
@@ -260,8 +282,8 @@ header .main-nav a:hover {
   display: none;
 }
 .contact p {
-  font-size: 2rem;
-  margin-left: 20rem;
+  font-size: 2.5rem;
+  margin-left: 25rem;
   padding-bottom: 2rem;
 }
 .contact .btn {
@@ -273,7 +295,7 @@ header .main-nav a:hover {
   margin-top: 2rem;
   font-weight: bold;
   font-size: 2rem;
-  margin-left: 28rem;
+  margin-left: 42rem;
 }
 
 footer .logo {
@@ -368,14 +390,78 @@ footer p {
     transform: scale(1);
   }
 }
+/* 1440px */
+@media (max-width: 1440px) {
+  .about-pricing p {
+    margin-left: 20rem;
+  }
+  .course-block h2 {
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+  .course-block .courses-table {
+    margin: 5vw;
+  }
+  .course-block .courses-table .head {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .course-block .courses-table .lable {
+    font-size: 1.5rem;
+  }
+  .course-block .courses-table .value {
+    font-size: 2rem;
+  }
+  .course-block .courses-table .cell {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  .course-block .courses-table .purpose p {
+    margin-left: 4rem;
+  }
+  .option h2 {
+    font-size: 3rem;
+  }
+  .option h3 {
+    margin-left: 28rem;
+    font-size: 2rem;
+  }
+  .option .box {
+    margin-left: 8vw;
+    gap: 12vw;
+  }
+  .option .box img {
+    max-width: 550px;
+  }
+  .option .box p {
+    font-size: 2rem;
+  }
+  .payment h2 {
+    font-size: 3rem;
+  }
+  .payment p {
+    font-size: 2rem;
+    margin-left: 30rem;
+  }
+  .contact h2 {
+    font-size: 3rem;
+  }
+  .contact h3 {
+    font-size: 2rem;
+  }
+  .contact p {
+    margin-left: 25rem;
+    font-size: 1.5rem;
+  }
+  .contact .btn {
+    margin-left: 28rem;
+  }
+}
+/* 768px */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3.8rem;
-  }
-  .about-pricing h2,
-  .course-table h2,
-  .payment h2 {
-    font-size: 2.5em;
   }
   header {
     padding-top: 1rem;
@@ -405,6 +491,9 @@ footer p {
     transition: right 0.3s ease;
     z-index: 1000;
   }
+  .about-pricing h2 {
+    font-size: 2.5rem;
+  }
   .about-pricing p {
     font-size: 2rem;
     margin: 0.5rem 92px;
@@ -413,8 +502,20 @@ footer p {
   .about-pricing p .pc-only {
     display: none;
   }
-  .course-block {
-    padding: 4rem 1.5rem;
+  .purpose,
+  .period,
+  .price,
+  .detail {
+    display: flex !important;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: 5px solid #edeced;
+    background: #ff8400;
+  }
+  .course-block h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 5rem;
   }
   .course-block .courses-table {
     grid-template-columns: 0px 1fr 1fr;
@@ -426,7 +527,8 @@ footer p {
     line-height: 1;
   }
   .course-block .courses-table .head {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    padding: 2rem 0 2rem 0;
   }
   .course-block .courses-table .cell-head {
     margin-right: 0.5rem;
@@ -444,42 +546,27 @@ footer p {
   }
   .course-block .courses-table .value {
     background: #fff6ef;
-    padding: 1rem 0;
-  }
-  .course-block .purpose {
-    display: flex;
-    width: 45rem;
-    border: 5px solid #edeced;
   }
   .course-block .purpose .cell {
     background: #ff8f1f;
-    padding: 5rem 0 5rem 0;
-    flex: 1;
   }
-  .course-block .period {
-    display: flex;
-    width: 45rem;
-    border: 5px solid #edeced;
+  .course-block .purpose .cell p {
+    width: 70%;
+    margin: 20vw;
+    text-align: left;
+  }
+  .course-block .purpose .cell p .sp-only {
+    display: inline;
   }
   .course-block .period .cell {
     background: #ff8f1f;
     padding: 1rem;
     flex: 1;
   }
-  .course-block .price {
-    display: flex;
-    width: 45rem;
-    border: 5px solid #edeced;
-  }
   .course-block .price .cell {
     background: #ff8f1f;
     padding: 1rem;
     flex: 1;
-  }
-  .course-block .detail {
-    display: flex;
-    width: 45rem;
-    border: 5px solid #edeced;
   }
   .course-block .detail .cell {
     background: #ff8f1f;
@@ -489,26 +576,43 @@ footer p {
     padding: 5rem 0 5rem 0;
     line-height: 4;
   }
+  .course-block .detail .cell-value p {
+    width: 70%;
+    margin: 0 auto;
+  }
   .course-block .detail .detail-cell {
     padding: 3rem 0 3rem 0;
-    line-height: 3;
+    line-height: 2;
+  }
+  .course-block .detail .detail-cell p {
+    width: 72%;
+    margin: 0 auto;
+  }
+  .option h2 {
+    font-size: 2.5rem;
   }
   .option h3 {
-    margin-left: 7rem;
+    font-size: 1.5rem;
+    margin-left: 10rem;
   }
   .option .box {
     display: block;
     margin-left: 0;
   }
   .option .box p {
-    margin-left: 8rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-left: 11rem;
+    margin-bottom: 5rem;
     line-height: 2;
   }
   .option .box img {
-    margin-left: 3rem;
+    margin-left: 6rem;
+  }
+  .payment h2 {
+    font-size: 2.5rem;
   }
   .payment P {
+    font-size: 1.5rem;
     margin-left: 14rem;
   }
   .contact {
@@ -517,7 +621,11 @@ footer p {
   .contact h2 {
     display: none;
   }
+  .contact h3 {
+    font-size: 2rem;
+  }
   .contact p {
+    font-size: 1.5rem;
     margin-left: 2rem;
   }
   .contact .btn {
